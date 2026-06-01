@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { PILLARS, QUESTIONS } from "../data/questions";
 
 type Props = {
@@ -30,8 +30,7 @@ export default function Audit({ onComplete }: Props) {
       <header className="relative z-10 border-b border-slate-900/80">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
           <div className="flex items-center gap-3">
-            <ShieldCheck className="h-6 w-6 text-[#93ADFF]" />
-            <span className="font-display text-base tracking-wide text-slate-100">OutboundOS</span>
+            <img src="/Original_3D_horizontal copy.png" alt="OutboundOS" className="h-8 w-auto" />
             <span className="hidden h-4 w-px bg-slate-800 sm:block" />
             <span className="hidden text-[11px] font-semibold tracking-[0.22em] text-slate-300 sm:inline">
               DIAGNOSTIC

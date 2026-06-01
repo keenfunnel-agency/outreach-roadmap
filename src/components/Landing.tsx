@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import {
-  ShieldCheck,
   Sparkles,
   ClipboardList,
   LayoutDashboard,
@@ -17,9 +16,8 @@ export default function Landing({ onStart }: Props) {
   return (
     <div className="relative min-h-screen">
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-        <div className="flex items-center gap-2.5">
-          <ShieldCheck className="h-7 w-7 text-[#93ADFF]" />
-          <span className="font-display text-lg tracking-wide text-slate-100">OutboundOS</span>
+        <div className="flex items-center">
+          <img src="/Original_3D_horizontal copy.png" alt="OutboundOS" className="h-9 w-auto" />
         </div>
         <div className="hidden items-center gap-6 text-xs tracking-widest text-slate-400 md:flex">
           <span>ARCHITECTURE AUDIT v1.0</span>
