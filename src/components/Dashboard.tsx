@@ -17,10 +17,10 @@ import {
   BookOpen,
   Link as LinkIcon,
   Check,
-  Map,
-  Layers,
-  Cpu,
-  ShieldCheck,
+  Shield,
+  Database,
+  Network,
+  BrainCircuit,
 } from "lucide-react";
 import { PILLARS, type PillarBlueprint, getMaturityLevel } from "../data/questions";
 import { slugForResource } from "../data/glossary";
@@ -96,31 +96,31 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
 
     const phases = [
       {
-        name: `${lowestPillar.short} Foundation & Architecture`,
-        icon: Map,
+        name: `${lowestPillar.short} Foundation & Infrastructure`,
+        icon: Shield,
         pct: 0.2,
-        description: `Stabilize the ${lowestPillar.name.toLowerCase()} layer — your lowest-scoring pillar — and lay the data, identity, and platform primitives every later initiative compounds on.`,
+        description: `Stabilize the ${lowestPillar.name.toLowerCase()} layer — your lowest-scoring pillar — and establish the foundational infrastructure every subsequent phase compounds on.`,
       },
       {
         name: "Core Asset Deployment",
-        icon: Layers,
+        icon: Database,
         pct: 0.4,
-        description: `Deployment and integration of ${deploymentAssets} into the production environment, wired through the operational pillars that move revenue.`,
+        description: `Deployment and integration of ${deploymentAssets} into the production environment, wired through the operational pillars that drive pipeline.`,
       },
       {
-        name: "Agentic Orchestration & QA",
-        icon: Cpu,
+        name: "Orchestration & Quality Assurance",
+        icon: Network,
         pct: 0.25,
         description: orchestrationAsset
-          ? `Layer autonomous workflows around ${orchestrationAsset}, with evaluation harnesses and human-in-the-loop guardrails across critical paths.`
-          : "Layer in autonomous workflows, evaluation harnesses, and human-in-the-loop guardrails across critical paths.",
+          ? `Layer automated workflows around ${orchestrationAsset}, with monitoring systems and human-in-the-loop guardrails across critical paths.`
+          : "Layer in automated workflows, monitoring systems, and human-in-the-loop guardrails across critical paths.",
       },
       {
-        name: "Handoff & Governance Audit",
-        icon: ShieldCheck,
+        name: "Handoff & Performance Audit",
+        icon: BrainCircuit,
         pct: 0.15,
         description:
-          "Lock in compliance, observability, and runbooks; transfer ownership to your operating teams with a final audit.",
+          "Lock in reporting, observability, and operational playbooks; transfer ownership to your growth team with a final performance audit.",
       },
     ];
     let cursor = new Date(kickoff);
@@ -151,7 +151,8 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
       <header className="relative z-10 border-b border-slate-900/80">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-6 py-5">
           <div className="flex items-center gap-3">
-            <img src="/Original_3D_horizontal.png" alt="Keenfunnel" className="h-7 w-auto" />
+            <Shield className="h-6 w-6 text-[#93ADFF]" />
+            <span className="font-display text-base tracking-wide text-slate-100">OutboundOS</span>
             <span className="hidden h-4 w-px bg-slate-800 sm:block" />
             <span className="hidden text-[11px] font-semibold tracking-[0.22em] text-slate-300 sm:inline">
               EXECUTIVE DASHBOARD
@@ -174,7 +175,7 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
               onClick={onRestart}
               className="inline-flex items-center gap-2 rounded border border-slate-800 bg-slate-950/70 px-3 py-1.5 text-[11px] tracking-widest text-slate-300 transition hover:border-slate-700 hover:text-white"
             >
-              <RotateCcw className="h-3.5 w-3.5" /> NEW DIAGNOSTIC
+              <RotateCcw className="h-3.5 w-3.5" /> NEW AUDIT
             </button>
           </div>
         </div>
@@ -188,7 +189,7 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
           className="grid gap-8 md:grid-cols-[1.25fr_1fr]"
         >
           <div className="rounded-2xl border border-slate-800/90 bg-slate-950/60 p-8">
-            <div className="text-[11px] tracking-[0.22em] text-[#93ADFF]">MATURITY ASSESSMENT</div>
+            <div className="text-[11px] tracking-[0.22em] text-[#93ADFF]">OUTBOUND MATURITY ASSESSMENT</div>
             <div className="mt-4 flex items-baseline gap-4">
               <div className="text-7xl font-semibold tracking-tight text-gold-gradient">
                 L{maturity.level}
@@ -216,15 +217,15 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
                 icon={Clock}
                 label="Total Engineering Hours"
                 value={totalHours.toLocaleString()}
-                sub="Vendor-agnostic build envelope"
+                sub="Architecture build envelope"
               />
               <Stat
                 icon={Gauge}
-                label="System Efficiency"
+                label="Engine Efficiency"
                 value={`${efficiencyPct}%`}
                 sub={
                   efficiencyPct < 60
-                    ? "High operational debt detected"
+                    ? "High infrastructure debt detected"
                     : "Architecture operating above parity"
                 }
                 emphasis={efficiencyPct < 60 ? "warn" : "ok"}
@@ -233,7 +234,7 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
                 icon={Video}
                 label="Projected Roadmap"
                 value={timelineLabel}
-                sub="Dedicated architecture team · 300h / month"
+                sub="Dedicated growth team · 300h / month"
               />
             </div>
           </div>
@@ -282,8 +283,8 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
                 Parity reached across all five pillars.
               </div>
               <p className="mt-2 text-sm text-slate-400">
-                Your architecture is positioned in the elite tier. Keenfunnel recommends a bespoke moat-building
-                engagement focused on compounding defensibility.
+                Your outbound architecture is positioned in the elite tier. We recommend a bespoke
+                optimization engagement focused on compounding your competitive moat.
               </p>
             </div>
           ) : (
@@ -426,22 +427,23 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
             <div className="max-w-xl">
               <div className="text-[11px] tracking-[0.22em] text-[#93ADFF]">NEXT STEP</div>
               <h3 className="mt-3 text-2xl font-semibold tracking-tight text-gold-gradient md:text-3xl">
-                Convert this diagnostic into a deployed architecture.
+                Convert this blueprint into a deployed outbound engine.
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-400">
                 Our senior architects will walk you through a confidential implementation
-                sequence, vendor-agnostic stack recommendations, and a phased execution plan.
+                sequence, vendor-agnostic infrastructure recommendations, and a phased execution plan
+                designed to scale pipeline without destroying domain reputation.
               </p>
             </div>
             <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
               <SpotlightButton
                 as="a"
-                href="https://meet.keenfunnel.com/"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Video className="h-4 w-4" />
-                VIDEO CALL
+                BOOK A CALL
               </SpotlightButton>
               <SpotlightButton
                 onClick={handleCopyShareLink}

@@ -1,24 +1,14 @@
-import { Scale, Facebook, Linkedin, Youtube } from "lucide-react";
+import { Scale, Linkedin } from "lucide-react";
 
 const socials = [
   {
-    label: "Facebook",
-    href: "https://www.facebook.com/keenfunnel",
-    icon: <Facebook className="h-5 w-5" />,
-  },
-  {
     label: "LinkedIn",
-    href: "https://linkedin.com/company/keen-funnel",
+    href: "#",
     icon: <Linkedin className="h-5 w-5" />,
   },
   {
-    label: "YouTube",
-    href: "https://www.youtube.com/@keenfunnel",
-    icon: <Youtube className="h-5 w-5" />,
-  },
-  {
     label: "X",
-    href: "https://x.com/keenfunnel",
+    href: "#",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -41,13 +31,11 @@ export default function Footer() {
           {/* Left — Legal */}
           <div className="flex justify-center md:justify-start">
             <a
-              href="https://legal-center.keenfunnel.com/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#"
               className="flex items-center gap-2 text-sm font-medium tracking-wide text-slate-400 transition-colors duration-300 hover:text-[#93ADFF]"
             >
               <Scale className="h-4 w-4" />
-              <span>Legal Center</span>
+              <span>Legal</span>
             </a>
           </div>
 
@@ -70,7 +58,7 @@ export default function Footer() {
           {/* Right — Copyright */}
           <div className="flex justify-center md:justify-end">
             <span className="text-[11px] tracking-widest text-slate-500">
-              © 2026 Keenfunnel | All Rights Reserved
+              © 2026 OutboundOS | All Rights Reserved
             </span>
           </div>
 

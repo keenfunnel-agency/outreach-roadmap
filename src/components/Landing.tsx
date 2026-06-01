@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
   ShieldCheck,
   Sparkles,
   ClipboardList,
@@ -19,14 +18,11 @@ export default function Landing({ onStart }: Props) {
     <div className="relative min-h-screen">
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         <div className="flex items-center gap-2.5">
-          <img
-            src="/Original_3D_horizontal.png"
-            alt="Keenfunnel"
-            className="h-8 w-auto"
-          />
+          <ShieldCheck className="h-7 w-7 text-[#93ADFF]" />
+          <span className="font-display text-lg tracking-wide text-slate-100">OutboundOS</span>
         </div>
         <div className="hidden items-center gap-6 text-xs tracking-widest text-slate-400 md:flex">
-          <span>DIAGNOSTIC v4.2</span>
+          <span>ARCHITECTURE AUDIT v1.0</span>
           <span className="h-1 w-1 rounded-full bg-[#93ADFF]" />
           <span>ENTERPRISE TIER</span>
         </div>
@@ -42,16 +38,17 @@ export default function Landing({ onStart }: Props) {
           <div className="w-full lg:w-2/3 text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/50 px-4 py-2 text-[14px] font-medium tracking-widest text-slate-300 backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-[#93ADFF]" />
-              AI MATURITY ASSESSMENT
+              OUTBOUND MATURITY ASSESSMENT
             </div>
 
             <h1 className="mt-8 font-display text-4xl font-normal leading-[1.1] tracking-tight text-clip md:text-6xl">
-              Quantify Your Architectural AI Readiness
+              Architect Your Enterprise Outbound Engine
             </h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-[1.55] text-slate-300 md:text-xl">
-              A 30-point strategic audit spanning data infrastructure, agentic operations, revenue intelligence,
-              culture, and governance. Engineered and executed with battle-tested operational precision.
+              A 30-point strategic audit spanning deliverability infrastructure, waterfall enrichment,
+              dynamic copywriting, multi-channel orchestration, and autonomous growth architecture.
+              Built for VPs of Sales and Founders scaling cold outreach without destroying domain reputation.
             </p>
           </div>
 
@@ -84,7 +81,7 @@ export default function Landing({ onStart }: Props) {
                 ))}
               </div>
               <div className="ml-3 font-sans text-sm text-text-on-dark">
-                trusted by <span className="text-[#93ADFF] font-medium">+600</span> decision makers
+                trusted by <span className="text-[#93ADFF] font-medium">+600</span> revenue leaders
               </div>
             </div>
           </div>
@@ -100,7 +97,7 @@ export default function Landing({ onStart }: Props) {
             <div>
               <div className="text-[11px] tracking-[0.22em] text-[#93ADFF]">HOW IT WORKS</div>
               <h2 className="mt-2 font-display text-xl font-normal tracking-[0.06em] text-text-ui md:text-2xl">
-                A four-step path from diagnostic to deployment.
+                A four-step path from audit to deployed outbound architecture.
               </h2>
             </div>
             <div className="hidden text-[11px] tracking-widest text-slate-500 md:block">
@@ -114,25 +111,25 @@ export default function Landing({ onStart }: Props) {
                 step: "01",
                 icon: ClipboardList,
                 title: "The Audit",
-                body: "Complete a 30-question diagnostic across 5 core pillars of your current architecture and AI readiness.",
+                body: "Complete a 30-question diagnostic across 5 pillars of your outbound architecture — from deliverability to autonomous growth.",
               },
               {
                 step: "02",
                 icon: LayoutDashboard,
                 title: "The Blueprint",
-                body: "Instantly unlock your maturity evaluation, precise engineering hour estimates, and a tailored execution timeline.",
+                body: "Unlock your maturity score, engineering hour estimates, and a phased implementation timeline tailored to your gaps.",
               },
               {
                 step: "03",
                 icon: Download,
                 title: "Export & Share",
-                body: "Download your customized blueprint as a PDF or generate a shareable link for your internal stakeholders.",
+                body: "Download your customized blueprint as a PDF or generate a shareable link for your revenue leadership team.",
               },
               {
                 step: "04",
                 icon: CalendarCheck,
-                title: "Executive Briefing",
-                body: "Book a strategic meeting with our team. Share your PDF or link beforehand so our architects can analyze your baseline prior to the call.",
+                title: "Architecture Review",
+                body: "Book a strategic session with our team. Share your blueprint beforehand so our architects can analyze your baseline prior to the call.",
               },
             ].map(({ step, icon: Icon, title, body }, i) => (
               <motion.div
@@ -170,4 +167,3 @@ export default function Landing({ onStart }: Props) {
     </div>
   );
 }
-
