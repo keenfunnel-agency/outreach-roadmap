@@ -36,17 +36,17 @@ export default function Landing({ onStart }: Props) {
           <div className="w-full lg:w-2/3 text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/50 px-4 py-2 text-[14px] font-medium tracking-widest text-slate-300 backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-[#93ADFF]" />
-              OUTBOUND MATURITY ASSESSMENT
+              OUTBOUND ARCHITECTURE DIAGNOSTIC
             </div>
 
             <h1 className="mt-8 font-display text-4xl font-normal leading-[1.1] tracking-tight text-clip md:text-6xl">
-              Architect Your Enterprise Outbound Engine
+              Engineer Your Predictable Pipeline Machine
             </h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-[1.55] text-slate-300 md:text-xl">
-              A 30-point strategic audit spanning deliverability infrastructure, waterfall enrichment,
-              dynamic copywriting, multi-channel orchestration, and autonomous growth architecture.
-              Built for VPs of Sales and Founders scaling cold outreach without destroying domain reputation.
+              A 30-point executive diagnostic covering deliverability shielding, waterfall enrichment,
+              precision copywriting, multi-channel sequence orchestration, and autonomous growth loops.
+              Purpose-built for revenue leaders compounding cold outbound without sacrificing sender reputation.
             </p>
           </div>
 
