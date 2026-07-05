@@ -15,7 +15,7 @@ type Props = { onStart: () => void };
 export default function Landing({ onStart }: Props) {
   return (
     <div className="relative min-h-screen">
-      <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+      <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-center md:justify-between px-6 py-6">
         <div className="flex items-center">
           <img src="/LOGO_NEW_JULY_2026.png" alt="OutboundOS" className="h-9 w-auto" />
         </div>
@@ -36,7 +36,7 @@ export default function Landing({ onStart }: Props) {
           <div className="w-full lg:w-2/3 text-center md:text-left flex flex-col items-center md:items-start">
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/50 px-4 py-2 text-[14px] font-medium tracking-widest text-slate-300 backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-[#93ADFF]" />
-              OUTBOUND ARCHITECTURE DIAGNOSTIC
+              OUTBOUND DIAGNOSTIC
             </div>
 
             <h1 className="mt-8 font-display text-4xl font-normal leading-[1.1] tracking-tight text-clip md:text-6xl">
