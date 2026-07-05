@@ -150,7 +150,7 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
       <header className="relative z-10 border-b border-slate-900/80">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-6 py-5">
           <div className="flex items-center gap-3">
-            <img src="/Original_3D_horizontal copy.png" alt="OutboundOS" className="h-8 w-auto" />
+            <img src="/LOGO_NEW_JULY_2026.png" alt="OutboundOS" className="h-8 w-auto" />
             <span className="hidden h-4 w-px bg-slate-800 sm:block" />
             <span className="hidden text-[11px] font-semibold tracking-[0.22em] text-slate-300 sm:inline">
               EXECUTIVE DASHBOARD

@@ -30,7 +30,7 @@ export default function Audit({ onComplete }: Props) {
       <header className="relative z-10 border-b border-slate-900/80">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
           <div className="flex items-center gap-3">
-            <img src="/Original_3D_horizontal copy.png" alt="OutboundOS" className="h-8 w-auto" />
+            <img src="/LOGO_NEW_JULY_2026.png" alt="OutboundOS" className="h-8 w-auto" />
             <span className="hidden h-4 w-px bg-slate-800 sm:block" />
             <span className="hidden text-[11px] font-semibold tracking-[0.22em] text-slate-300 sm:inline">
               DIAGNOSTIC
@@ -51,7 +51,7 @@ export default function Audit({ onComplete }: Props) {
       </header>
 
       <main className="relative z-10 mx-auto flex max-w-3xl flex-col px-6 py-14 md:py-20">
-        <div className="mb-6 flex items-center justify-between text-[11px] font-semibold uppercase tracking-[0.22em]">
+        <div className="mb-6 flex flex-col items-center gap-2 text-center md:flex-row md:items-center md:justify-between md:text-left text-[11px] font-semibold uppercase tracking-[0.22em]">
           <span className="text-[#93ADFF]">Pillar {PILLARS.findIndex((p) => p.id === pillar.id) + 1}</span>
           <span className="bg-[linear-gradient(to_right,#DCC8F8,#FCFCBF,#FFD4F7,#C8DDFF,#B2E0FF,#9ABDFF,#93ADFF)] bg-clip-text text-transparent">{pillar.short}</span>
         </div>
@@ -64,10 +64,10 @@ export default function Audit({ onComplete }: Props) {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.28 }}
           >
-            <div className="text-xs tracking-[0.22em] text-slate-500">
+            <div className="text-xs tracking-[0.22em] text-slate-500 text-center md:text-left">
               QUESTION {String(question.id).padStart(2, "0")}
             </div>
-            <h2 className="mt-3 font-display text-lg font-normal leading-snug tracking-[0.06em] text-text-ui md:text-xl">
+            <h2 className="mt-3 font-display text-lg font-normal leading-snug tracking-[0.06em] text-text-ui md:text-xl text-center md:text-left">
               {question.text}
             </h2>
 

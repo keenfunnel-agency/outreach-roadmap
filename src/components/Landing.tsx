@@ -17,7 +17,7 @@ export default function Landing({ onStart }: Props) {
     <div className="relative min-h-screen">
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         <div className="flex items-center">
-          <img src="/Original_3D_horizontal copy.png" alt="OutboundOS" className="h-9 w-auto" />
+          <img src="/LOGO_NEW_JULY_2026.png" alt="OutboundOS" className="h-9 w-auto" />
         </div>
         <div className="hidden items-center gap-6 text-xs tracking-widest text-slate-400 md:flex">
           <span>ARCHITECTURE AUDIT v1.0</span>
@@ -33,7 +33,7 @@ export default function Landing({ onStart }: Props) {
           transition={{ duration: 0.7 }}
           className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-10"
         >
-          <div className="w-full lg:w-2/3 text-left">
+          <div className="w-full lg:w-2/3 text-center md:text-left flex flex-col items-center md:items-start">
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/50 px-4 py-2 text-[14px] font-medium tracking-widest text-slate-300 backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-[#93ADFF]" />
               OUTBOUND ARCHITECTURE DIAGNOSTIC
@@ -91,7 +91,7 @@ export default function Landing({ onStart }: Props) {
           transition={{ delay: 0.18, duration: 0.7 }}
           className="mt-16"
         >
-          <div className="flex items-end justify-between">
+          <div className="flex flex-col items-center text-center md:text-left md:flex-row md:items-end justify-between">
             <div>
               <div className="text-[11px] tracking-[0.22em] text-[#93ADFF]">HOW IT WORKS</div>
               <h2 className="mt-2 font-display text-xl font-normal tracking-[0.06em] text-text-ui md:text-2xl">
